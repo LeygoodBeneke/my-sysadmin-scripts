@@ -1,0 +1,7 @@
+services:
+  monitor:
+    build: .
+    image: my-script
+    ports:
+      # 8081, чтобы не конфликтовать с контейнером my-app под systemd на 8080
+      - "8081:8080"
